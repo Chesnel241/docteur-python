@@ -1,6 +1,6 @@
 {
-  "name": "Docteur Python",
-  "short_name": "Dr Python",
+  "name": "Prof Python",
+  "short_name": "Prof Python",
   "description": "Apprends Python de zéro, une consultation à la fois.",
   "lang": "fr",
   "start_url": "/",

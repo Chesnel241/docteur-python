@@ -1,4 +1,4 @@
-/* Docteur Python : moteur Python (Pyodide) exécuté dans un Web Worker */
+/* Prof Python : moteur Python (Pyodide) exécuté dans un Web Worker */
 let pyodide = null;
 let inputResolve = null;
 const decOut = new TextDecoder();

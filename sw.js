@@ -1,9 +1,8 @@
-/* Docteur Python : service worker (mode hors ligne) */
-const VERSION = "dp-928a26f9fe";
-const CORE = ["/", "/py-worker.js", "/favicon.svg", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
+/* Prof Python : service worker (mode hors ligne) */
+const VERSION = "dp-2026-10-08-1";
+const CORE = ["/", "/py-worker.js", "/favicon.svg", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png", "/fonts/figtree-latin-wght-normal.woff2", "/fonts/bricolage-grotesque-latin-opsz-normal.woff2", "/fonts/jetbrains-mono-latin-wght-normal.woff2"];
 const PY = ["/pyodide/pyodide.js", "/pyodide/pyodide.asm.js", "/pyodide/pyodide.asm.wasm", "/pyodide/python_stdlib.wasm", "/pyodide/pyodide-lock.json"];
 const PY_CACHE = "dp-pyodide-0.27.8";
-const FONT_CACHE = "dp-fonts";
 
 self.addEventListener("install", (e) => {
   e.waitUntil(Promise.all([
@@ -13,7 +12,7 @@ self.addEventListener("install", (e) => {
 });
 
 self.addEventListener("activate", (e) => {
-  e.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => ![VERSION, PY_CACHE, FONT_CACHE].includes(k)).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
+  e.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => ![VERSION, PY_CACHE].includes(k)).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
 });
 
 async function cacheFirst(req, name) {
@@ -47,7 +46,5 @@ self.addEventListener("fetch", (e) => {
     if (url.pathname.startsWith("/pyodide/")) e.respondWith(cacheFirst(req, PY_CACHE));
     else if (req.mode === "navigate") e.respondWith(networkFirst(req));
     else e.respondWith(staleWhileRevalidate(req, VERSION));
-  } else if (url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com") {
-    e.respondWith(staleWhileRevalidate(req, FONT_CACHE));
   }
 });

@@ -2,28 +2,38 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<title>Prof Python</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Apprends Python de zéro avec le Docteur Python : explications terre à terre, quiz, exercices corrigés automatiquement, diagnostic des erreurs en français et un labo pour exécuter ton code dans le navigateur.">
+<meta name="description" content="Apprends Python de zéro avec le Prof Python : explications terre à terre, quiz, exercices corrigés automatiquement, diagnostic des erreurs en français et un labo pour exécuter ton code dans le navigateur.">
 <meta name="theme-color" content="#2E66D6">
-<meta property="og:title" content="Docteur Python">
+<meta property="og:title" content="Prof Python">
 <meta property="og:description" content="Apprends Python de zéro, une consultation à la fois.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://prof-python.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Dr Python">
+<meta name="apple-mobile-web-app-title" content="Prof Python">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <script>window.DP_SITE = true;</script>
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-<title>Docteur Python</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
-<style>/* Concept : un cabinet lumineux. Cartes larges, tuiles d'icônes teintées, couleurs du serpent Python (bleu, jaune) + couleurs d'état. */
+<link rel="preload" href="/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* Polices auto-hébergées (SIL Open Font License, voir /fonts) */
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-display:swap;font-weight:200 800;src:url(/fonts/bricolage-grotesque-latin-ext-opsz-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-display:swap;font-weight:200 800;src:url(/fonts/bricolage-grotesque-latin-opsz-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Figtree";font-style:normal;font-display:swap;font-weight:300 900;src:url(/fonts/figtree-latin-ext-wght-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Figtree";font-style:normal;font-display:swap;font-weight:300 900;src:url(/fonts/figtree-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-display:swap;font-weight:100 800;src:url(/fonts/jetbrains-mono-latin-ext-wght-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-display:swap;font-weight:100 800;src:url(/fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Concept : un cabinet lumineux. Cartes larges, tuiles d'icônes teintées, couleurs du serpent Python (bleu, jaune) + couleurs d'état. */
 :root{
   --bg:#F3F5FA; --surface:#FFFFFF; --surface-2:#F7F9FD; --ink:#141C33; --ink-2:#47526B; --muted:#7A8499; --line:#E1E6F0; --line-2:#EDF0F6;
   --blue:#2E66D6; --blue-ink:#1D4CA8; --blue-soft:#E6EEFC;
@@ -509,13 +519,14 @@ td code{white-space:nowrap}
 .blank:focus{box-shadow:0 0 0 3px color-mix(in srgb,var(--violet) 25%,transparent)}
 .blank.ok{border-color:var(--green);background:var(--green-soft)}
 .blank.ko{border-color:var(--red);background:var(--red-soft)}
+.legal-link{text-align:center;font-size:.82rem;margin:40px 0 8px}.legal-link a{color:var(--muted)}
 </style>
 
 <header class="top">
   <div class="top-in">
-    <button class="brand" data-nav="home" aria-label="Docteur Python, accueil">
+    <button class="brand" data-nav="home" aria-label="Prof Python, accueil">
       <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true"><rect x="14" y="3" width="12" height="22" rx="6" fill="var(--blue)"/><rect x="3" y="14" width="22" height="12" rx="6" fill="var(--blue)"/><rect x="14" y="15" width="12" height="22" rx="6" fill="var(--yellow)"/><rect x="15" y="14" width="22" height="12" rx="6" fill="var(--yellow)"/><circle cx="20" cy="8.5" r="2" fill="var(--surface)"/><circle cx="20" cy="31.5" r="2" fill="var(--surface)"/></svg>
-      <span class="brand-name">Docteur <span>Python</span></span>
+      <span class="brand-name">Prof <span>Python</span></span>
     </button>
     <nav class="nav" aria-label="Navigation principale">
       <button data-nav="home"><svg class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3" /> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" /> <circle cx="18" cy="5" r="3" /></svg> Parcours</button>
@@ -534,6 +545,7 @@ td code{white-space:nowrap}
   <div class="view" id="v-lab" hidden></div>
   <div class="view" id="v-train" hidden></div>
   <div class="view" id="v-aide" hidden></div>
+  <p class="legal-link"><a href="/mentions-legales">Mentions légales et confidentialité</a></p>
 </main>
 
 <nav class="bnav" aria-label="Navigation">
@@ -545,7 +557,7 @@ td code{white-space:nowrap}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>window.DP_ICONS={"activity":"<path d=\"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2\" />","arrow-down-up":"<path d=\"m3 16 4 4 4-4\" /> <path d=\"M7 20V4\" /> <path d=\"m21 8-4-4-4 4\" /> <path d=\"M17 4v16\" />","arrow-right":"<path d=\"M5 12h14\" /> <path d=\"m12 5 7 7-7 7\" />","badge-check":"<path d=\"M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z\" /> <path d=\"m9 12 2 2 4-4\" />","ban":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"m4.9 4.9 14.2 14.2\" />","binary":"<rect x=\"14\" y=\"14\" width=\"4\" height=\"6\" rx=\"2\" /> <rect x=\"6\" y=\"4\" width=\"4\" height=\"6\" rx=\"2\" /> <path d=\"M6 20h4\" /> <path d=\"M14 10h4\" /> <path d=\"M6 14h2v6\" /> <path d=\"M14 4h2v6\" />","blocks":"<rect width=\"7\" height=\"7\" x=\"14\" y=\"3\" rx=\"1\" /> <path d=\"M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3\" />","book-a":"<path d=\"M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20\" /> <path d=\"m8 13 4-7 4 7\" /> <path d=\"M9.1 11h5.7\" />","book-open":"<path d=\"M12 7v14\" /> <path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\" />","box":"<path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\" /> <path d=\"m3.3 7 8.7 5 8.7-5\" /> <path d=\"M12 22V12\" />","boxes":"<path d=\"M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z\" /> <path d=\"m7 16.5-4.74-2.85\" /> <path d=\"m7 16.5 5-3\" /> <path d=\"M7 16.5v5.17\" /> <path d=\"M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z\" /> <path d=\"m17 16.5-5-3\" /> <path d=\"m17 16.5 4.74-2.85\" /> <path d=\"M17 16.5v5.17\" /> <path d=\"M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z\" /> <path d=\"M12 8 7.26 5.15\" /> <path d=\"m12 8 4.74-2.85\" /> <path d=\"M12 13.5V8\" />","brain":"<path d=\"M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z\" /> <path d=\"M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z\" /> <path d=\"M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4\" /> <path d=\"M17.599 6.5a3 3 0 0 0 .399-1.375\" /> <path d=\"M6.003 5.125A3 3 0 0 0 6.401 6.5\" /> <path d=\"M3.477 10.896a4 4 0 0 1 .585-.396\" /> <path d=\"M19.938 10.5a4 4 0 0 1 .585.396\" /> <path d=\"M6 18a4 4 0 0 1-1.967-.516\" /> <path d=\"M19.967 17.484A4 4 0 0 1 18 18\" />","bug":"<path d=\"m8 2 1.88 1.88\" /> <path d=\"M14.12 3.88 16 2\" /> <path d=\"M9 7.13v-1a3.003 3.003 0 1 1 6 0v1\" /> <path d=\"M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6\" /> <path d=\"M12 20v-9\" /> <path d=\"M6.53 9C4.6 8.8 3 7.1 3 5\" /> <path d=\"M6 13H2\" /> <path d=\"M3 21c0-2.1 1.7-3.9 3.8-4\" /> <path d=\"M20.97 5c0 2.1-1.6 3.8-3.5 4\" /> <path d=\"M22 13h-4\" /> <path d=\"M17.2 17c2.1.1 3.8 1.9 3.8 4\" />","calculator":"<rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\" /> <line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\" /> <line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\" /> <path d=\"M16 10h.01\" /> <path d=\"M12 10h.01\" /> <path d=\"M8 10h.01\" /> <path d=\"M12 14h.01\" /> <path d=\"M8 14h.01\" /> <path d=\"M12 18h.01\" /> <path d=\"M8 18h.01\" />","calendar-check":"<path d=\"M8 2v4\" /> <path d=\"M16 2v4\" /> <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" /> <path d=\"M3 10h18\" /> <path d=\"m9 16 2 2 4-4\" />","check":"<path d=\"M20 6 9 17l-5-5\" />","chevron-left":"<path d=\"m15 18-6-6 6-6\" />","chevron-right":"<path d=\"m9 18 6-6-6-6\" />","circle":"<circle cx=\"12\" cy=\"12\" r=\"10\" />","circle-check":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"m9 12 2 2 4-4\" />","circle-dot":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <circle cx=\"12\" cy=\"12\" r=\"1\" />","circle-help":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\" /> <path d=\"M12 17h.01\" />","circle-x":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"m15 9-6 6\" /> <path d=\"m9 9 6 6\" />","clipboard-check":"<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\" /> <path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\" /> <path d=\"m9 14 2 2 4-4\" />","clock":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <polyline points=\"12 6 12 12 16 14\" />","code":"<polyline points=\"16 18 22 12 16 6\" /> <polyline points=\"8 6 2 12 8 18\" />","code-xml":"<path d=\"m18 16 4-4-4-4\" /> <path d=\"m6 8-4 4 4 4\" /> <path d=\"m14.5 4-5 16\" />","cog":"<path d=\"M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z\" /> <path d=\"M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z\" /> <path d=\"M12 2v2\" /> <path d=\"M12 22v-2\" /> <path d=\"m17 20.66-1-1.73\" /> <path d=\"M11 10.27 7 3.34\" /> <path d=\"m20.66 17-1.73-1\" /> <path d=\"m3.34 7 1.73 1\" /> <path d=\"M14 12h8\" /> <path d=\"M2 12h2\" /> <path d=\"m20.66 7-1.73 1\" /> <path d=\"m3.34 17 1.73-1\" /> <path d=\"m17 3.34-1 1.73\" /> <path d=\"m11 13.73-4 6.93\" />","copy":"<rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\" /> <path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\" />","corner-down-left":"<polyline points=\"9 10 4 15 9 20\" /> <path d=\"M20 4v7a4 4 0 0 1-4 4H4\" />","dices":"<rect width=\"12\" height=\"12\" x=\"2\" y=\"10\" rx=\"2\" ry=\"2\" /> <path d=\"m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6\" /> <path d=\"M6 18h.01\" /> <path d=\"M10 14h.01\" /> <path d=\"M15 6h.01\" /> <path d=\"M18 9h.01\" />","divide":"<circle cx=\"12\" cy=\"6\" r=\"1\" /> <line x1=\"5\" x2=\"19\" y1=\"12\" y2=\"12\" /> <circle cx=\"12\" cy=\"18\" r=\"1\" />","dot":"<circle cx=\"12.1\" cy=\"12.1\" r=\"1\" />","download":"<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" /> <polyline points=\"7 10 12 15 17 10\" /> <line x1=\"12\" x2=\"12\" y1=\"15\" y2=\"3\" />","dumbbell":"<path d=\"M14.4 14.4 9.6 9.6\" /> <path d=\"M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z\" /> <path d=\"m21.5 21.5-1.4-1.4\" /> <path d=\"M3.9 3.9 2.5 2.5\" /> <path d=\"M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z\" />","eraser":"<path d=\"m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21\" /> <path d=\"M22 21H7\" /> <path d=\"m5 11 9 9\" />","eye":"<path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\" /> <circle cx=\"12\" cy=\"12\" r=\"3\" />","file-code-2":"<path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\" /> <path d=\"M14 2v4a2 2 0 0 0 2 2h4\" /> <path d=\"m5 12-3 3 3 3\" /> <path d=\"m9 18 3-3-3-3\" />","file-text":"<path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\" /> <path d=\"M14 2v4a2 2 0 0 0 2 2h4\" /> <path d=\"M10 9H8\" /> <path d=\"M16 13H8\" /> <path d=\"M16 17H8\" />","file-warning":"<path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\" /> <path d=\"M12 9v4\" /> <path d=\"M12 17h.01\" />","file-x":"<path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\" /> <path d=\"M14 2v4a2 2 0 0 0 2 2h4\" /> <path d=\"m14.5 12.5-5 5\" /> <path d=\"m9.5 12.5 5 5\" />","fingerprint":"<path d=\"M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4\" /> <path d=\"M14 13.12c0 2.38 0 6.38-1 8.88\" /> <path d=\"M17.29 21.02c.12-.6.43-2.3.5-3.02\" /> <path d=\"M2 12a10 10 0 0 1 18-6\" /> <path d=\"M2 16h.01\" /> <path d=\"M21.8 16c.2-2 .131-5.354 0-6\" /> <path d=\"M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2\" /> <path d=\"M8.65 22c.21-.66.45-1.32.57-2\" /> <path d=\"M9 6.8a6 6 0 0 1 9 5.2v2\" />","flag":"<path d=\"M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z\" /> <line x1=\"4\" x2=\"4\" y1=\"22\" y2=\"15\" />","flame":"<path d=\"M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z\" />","flask-conical":"<path d=\"M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2\" /> <path d=\"M8.5 2h7\" /> <path d=\"M7 16h10\" />","footprints":"<path d=\"M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z\" /> <path d=\"M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z\" /> <path d=\"M16 17h4\" /> <path d=\"M4 13h4\" />","git-fork":"<circle cx=\"12\" cy=\"18\" r=\"3\" /> <circle cx=\"6\" cy=\"6\" r=\"3\" /> <circle cx=\"18\" cy=\"6\" r=\"3\" /> <path d=\"M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9\" /> <path d=\"M12 12v3\" />","graduation-cap":"<path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z\" /> <path d=\"M22 10v6\" /> <path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\" />","grid-3x3":"<rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" /> <path d=\"M3 9h18\" /> <path d=\"M3 15h18\" /> <path d=\"M9 3v18\" /> <path d=\"M15 3v18\" />","hand":"<path d=\"M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2\" /> <path d=\"M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2\" /> <path d=\"M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8\" /> <path d=\"M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15\" />","heart-pulse":"<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\" /> <path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\" />","hourglass":"<path d=\"M5 22h14\" /> <path d=\"M5 2h14\" /> <path d=\"M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22\" /> <path d=\"M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2\" />","import":"<path d=\"M12 3v12\" /> <path d=\"m8 11 4 4 4-4\" /> <path d=\"M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4\" />","indent-increase":"<path d=\"M21 12H11\" /> <path d=\"M21 18H11\" /> <path d=\"M21 6H11\" /> <path d=\"m3 8 4 4-4 4\" />","infinity":"<path d=\"M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z\" />","info":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"M12 16v-4\" /> <path d=\"M12 8h.01\" />","key-round":"<path d=\"M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z\" /> <circle cx=\"16.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" />","keyboard":"<path d=\"M10 8h.01\" /> <path d=\"M12 12h.01\" /> <path d=\"M14 8h.01\" /> <path d=\"M16 12h.01\" /> <path d=\"M18 8h.01\" /> <path d=\"M6 8h.01\" /> <path d=\"M7 16h10\" /> <path d=\"M8 12h.01\" /> <rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\" />","layers":"<path d=\"m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z\" /> <path d=\"m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65\" /> <path d=\"m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65\" />","layout-grid":"<rect width=\"7\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\" /> <rect width=\"7\" height=\"7\" x=\"14\" y=\"3\" rx=\"1\" /> <rect width=\"7\" height=\"7\" x=\"14\" y=\"14\" rx=\"1\" /> <rect width=\"7\" height=\"7\" x=\"3\" y=\"14\" rx=\"1\" />","lightbulb":"<path d=\"M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5\" /> <path d=\"M9 18h6\" /> <path d=\"M10 22h4\" />","list":"<path d=\"M3 12h.01\" /> <path d=\"M3 18h.01\" /> <path d=\"M3 6h.01\" /> <path d=\"M8 12h13\" /> <path d=\"M8 18h13\" /> <path d=\"M8 6h13\" />","list-checks":"<path d=\"m3 17 2 2 4-4\" /> <path d=\"m3 7 2 2 4-4\" /> <path d=\"M13 6h8\" /> <path d=\"M13 12h8\" /> <path d=\"M13 18h8\" />","list-filter":"<path d=\"M3 6h18\" /> <path d=\"M7 12h10\" /> <path d=\"M10 18h4\" />","list-x":"<path d=\"M11 12H3\" /> <path d=\"M16 6H3\" /> <path d=\"M16 18H3\" /> <path d=\"m19 10-4 4\" /> <path d=\"m15 10 4 4\" />","message-square-text":"<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\" /> <path d=\"M13 8H7\" /> <path d=\"M17 12H7\" />","notebook-tabs":"<path d=\"M2 6h4\" /> <path d=\"M2 10h4\" /> <path d=\"M2 14h4\" /> <path d=\"M2 18h4\" /> <rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\" /> <path d=\"M15 2v20\" /> <path d=\"M15 7h5\" /> <path d=\"M15 12h5\" /> <path d=\"M15 17h5\" />","package":"<path d=\"M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z\" /> <path d=\"M12 22V12\" /> <path d=\"m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7\" /> <path d=\"m7.5 4.27 9 5.15\" />","package-open":"<path d=\"M12 22v-9\" /> <path d=\"M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z\" /> <path d=\"M20 13v3.87a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13\" /> <path d=\"M21 12.43a1.93 1.93 0 0 0 0-3.36L8.83 2.2a1.64 1.64 0 0 0-1.63 0L3 4.57a1.93 1.93 0 0 0 0 3.36l12.18 6.86a1.636 1.636 0 0 0 1.63 0z\" />","package-x":"<path d=\"M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14\" /> <path d=\"m7.5 4.27 9 5.15\" /> <polyline points=\"3.29 7 12 12 20.71 7\" /> <line x1=\"12\" x2=\"12\" y1=\"22\" y2=\"12\" /> <path d=\"m17 13 5 5m-5 0 5-5\" />","pill":"<path d=\"m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z\" /> <path d=\"m8.5 8.5 7 7\" />","play":"<polygon points=\"6 3 20 12 6 21 6 3\" />","puzzle":"<path d=\"M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z\" />","radar":"<path d=\"M19.07 4.93A10 10 0 0 0 6.99 3.34\" /> <path d=\"M4 6h.01\" /> <path d=\"M2.29 9.62A10 10 0 1 0 21.31 8.35\" /> <path d=\"M16.24 7.76A6 6 0 1 0 8.23 16.67\" /> <path d=\"M12 18h.01\" /> <path d=\"M17.99 11.66A6 6 0 0 1 15.77 16.67\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" /> <path d=\"m13.41 10.59 5.66-5.66\" />","regex":"<path d=\"M17 3v10\" /> <path d=\"m12.67 5.5 8.66 5\" /> <path d=\"m12.67 10.5 8.66-5\" /> <path d=\"M9 17a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2z\" />","repeat":"<path d=\"m17 2 4 4-4 4\" /> <path d=\"M3 11v-1a4 4 0 0 1 4-4h14\" /> <path d=\"m7 22-4-4 4-4\" /> <path d=\"M21 13v1a4 4 0 0 1-4 4H3\" />","repeat-2":"<path d=\"m2 9 3-3 3 3\" /> <path d=\"M13 18H7a2 2 0 0 1-2-2V6\" /> <path d=\"m22 15-3 3-3-3\" /> <path d=\"M11 6h6a2 2 0 0 1 2 2v10\" />","rotate-ccw":"<path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" /> <path d=\"M3 3v5h5\" />","route":"<circle cx=\"6\" cy=\"19\" r=\"3\" /> <path d=\"M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15\" /> <circle cx=\"18\" cy=\"5\" r=\"3\" />","scan-eye":"<path d=\"M3 7V5a2 2 0 0 1 2-2h2\" /> <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" /> <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" /> <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" /> <circle cx=\"12\" cy=\"12\" r=\"1\" /> <path d=\"M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0\" />","scan-text":"<path d=\"M3 7V5a2 2 0 0 1 2-2h2\" /> <path d=\"M17 3h2a2 2 0 0 1 2 2v2\" /> <path d=\"M21 17v2a2 2 0 0 1-2 2h-2\" /> <path d=\"M7 21H5a2 2 0 0 1-2-2v-2\" /> <path d=\"M7 8h8\" /> <path d=\"M7 12h10\" /> <path d=\"M7 16h6\" />","scissors":"<circle cx=\"6\" cy=\"6\" r=\"3\" /> <path d=\"M8.12 8.12 12 12\" /> <path d=\"M20 4 8.12 15.88\" /> <circle cx=\"6\" cy=\"18\" r=\"3\" /> <path d=\"M14.8 14.8 20 20\" />","scroll":"<path d=\"M19 17V5a2 2 0 0 0-2-2H4\" /> <path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\" />","scroll-text":"<path d=\"M15 12h-5\" /> <path d=\"M15 8h-5\" /> <path d=\"M19 17V5a2 2 0 0 0-2-2H4\" /> <path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\" />","search":"<circle cx=\"11\" cy=\"11\" r=\"8\" /> <path d=\"m21 21-4.3-4.3\" />","search-x":"<path d=\"m13.5 8.5-5 5\" /> <path d=\"m8.5 8.5 5 5\" /> <circle cx=\"11\" cy=\"11\" r=\"8\" /> <path d=\"m21 21-4.3-4.3\" />","settings-2":"<path d=\"M20 7h-9\" /> <path d=\"M14 17H5\" /> <circle cx=\"17\" cy=\"17\" r=\"3\" /> <circle cx=\"7\" cy=\"7\" r=\"3\" />","shapes":"<path d=\"M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z\" /> <rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\" /> <circle cx=\"17.5\" cy=\"17.5\" r=\"3.5\" />","share":"<path d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\" /> <polyline points=\"16 6 12 2 8 6\" /> <line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"15\" />","shield-alert":"<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" /> <path d=\"M12 8v4\" /> <path d=\"M12 16h.01\" />","shield-check":"<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" /> <path d=\"m9 12 2 2 4-4\" />","shuffle":"<path d=\"M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22\" /> <path d=\"m18 2 4 4-4 4\" /> <path d=\"M2 6h1.9c1.5 0 2.9.9 3.6 2.2\" /> <path d=\"M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8\" /> <path d=\"m18 14 4 4-4 4\" />","skip-back":"<polygon points=\"19 20 9 12 19 4 19 20\" /> <line x1=\"5\" x2=\"5\" y1=\"19\" y2=\"5\" />","skip-forward":"<polygon points=\"5 4 15 12 5 20 5 4\" /> <line x1=\"19\" x2=\"19\" y1=\"5\" y2=\"19\" />","smartphone":"<rect width=\"14\" height=\"20\" x=\"5\" y=\"2\" rx=\"2\" ry=\"2\" /> <path d=\"M12 18h.01\" />","sparkles":"<path d=\"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z\" /> <path d=\"M20 3v4\" /> <path d=\"M22 5h-4\" /> <path d=\"M4 17v2\" /> <path d=\"M5 18H3\" />","square":"<rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" />","square-terminal":"<path d=\"m7 11 2-2-2-2\" /> <path d=\"M11 13h4\" /> <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\" />","star":"<path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\" />","step-back":"<line x1=\"18\" x2=\"18\" y1=\"20\" y2=\"4\" /> <polygon points=\"14,20 4,12 14,4\" />","step-forward":"<line x1=\"6\" x2=\"6\" y1=\"4\" y2=\"20\" /> <polygon points=\"10,4 20,12 10,20\" />","stethoscope":"<path d=\"M11 2v2\" /> <path d=\"M5 2v2\" /> <path d=\"M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1\" /> <path d=\"M8 15a6 6 0 0 0 12 0v-3\" /> <circle cx=\"20\" cy=\"10\" r=\"2\" />","table":"<path d=\"M12 3v18\" /> <rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" /> <path d=\"M3 9h18\" /> <path d=\"M3 15h18\" />","target":"<circle cx=\"12\" cy=\"12\" r=\"10\" /> <circle cx=\"12\" cy=\"12\" r=\"6\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" />","terminal":"<polyline points=\"4 17 10 11 4 5\" /> <line x1=\"12\" x2=\"20\" y1=\"19\" y2=\"19\" />","text":"<path d=\"M17 6.1H3\" /> <path d=\"M21 12.1H3\" /> <path d=\"M15.1 18H3\" />","text-cursor-input":"<path d=\"M5 4h1a3 3 0 0 1 3 3 3 3 0 0 1 3-3h1\" /> <path d=\"M13 20h-1a3 3 0 0 1-3-3 3 3 0 0 1-3 3H5\" /> <path d=\"M5 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1\" /> <path d=\"M13 8h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7\" /> <path d=\"M9 7v10\" />","toggle-right":"<rect width=\"20\" height=\"12\" x=\"2\" y=\"6\" rx=\"6\" ry=\"6\" /> <circle cx=\"16\" cy=\"12\" r=\"2\" />","trash-2":"<path d=\"M3 6h18\" /> <path d=\"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6\" /> <path d=\"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2\" /> <line x1=\"10\" x2=\"10\" y1=\"11\" y2=\"17\" /> <line x1=\"14\" x2=\"14\" y1=\"11\" y2=\"17\" />","triangle-alert":"<path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\" /> <path d=\"M12 9v4\" /> <path d=\"M12 17h.01\" />","trophy":"<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\" /> <path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\" /> <path d=\"M4 22h16\" /> <path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\" /> <path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\" /> <path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\" />","type":"<polyline points=\"4 7 4 4 20 4 20 7\" /> <line x1=\"9\" x2=\"15\" y1=\"20\" y2=\"20\" /> <line x1=\"12\" x2=\"12\" y1=\"4\" y2=\"20\" />","variable":"<path d=\"M8 21s-4-3-4-9 4-9 4-9\" /> <path d=\"M16 3s4 3 4 9-4 9-4 9\" /> <line x1=\"15\" x2=\"9\" y1=\"9\" y2=\"15\" /> <line x1=\"9\" x2=\"15\" y1=\"9\" y2=\"15\" />","view":"<path d=\"M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2\" /> <path d=\"M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2\" /> <circle cx=\"12\" cy=\"12\" r=\"1\" /> <path d=\"M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0\" />","wrench":"<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\" />","x":"<path d=\"M18 6 6 18\" /> <path d=\"m6 6 12 12\" />"};
-/* ====== Parcours Docteur Python : niveaux 1 et 2 ====== */
+/* ====== Parcours Prof Python : niveaux 1 et 2 ====== */
 const LEVELS = [
   { n: 1, title: "Les fondations", sub: "Afficher, stocker, calculer, dialoguer", color: "blue", icon: "blocks" },
   { n: 2, title: "Décider et répéter", sub: "Conditions et boucles", color: "orange", icon: "git-fork" },
@@ -567,7 +579,7 @@ LESSONS.push({
     { t: "analogy", title: "Un assistant très rapide mais très littéral", html: "Imagine un assistant capable de faire un milliard d'opérations par seconde, mais qui prend tout <b>au pied de la lettre</b>. Si tu écris <code>print</code>, il affiche. Si tu écris <code>prinnt</code>, il s'arrête et te dit qu'il ne connaît pas ce mot. Il n'est pas méchant, il est précis." },
     { t: "h", text: "Afficher quelque chose : print()" },
     { t: "code", code: `print("Bonjour !")
-print("Je suis le Docteur Python.")`, note: "<b>print</b> veut dire « imprimer » : il affiche ce que tu mets entre les parenthèses. Le texte se met toujours <b>entre guillemets</b>." },
+print("Je suis le Prof Python.")`, note: "<b>print</b> veut dire « imprimer » : il affiche ce que tu mets entre les parenthèses. Le texte se met toujours <b>entre guillemets</b>." },
     { t: "flow", steps: ["Ligne 1 : affiche « Bonjour ! »", "Ligne 2 : affiche la présentation", "Plus de ligne : le programme s'arrête"] },
     { t: "p", html: "Les <b>nombres</b> s'écrivent sans guillemets, et Python sait les calculer. Tu peux aussi afficher plusieurs choses d'un coup en les séparant par des <b>virgules</b> : Python ajoute un espace entre elles." },
     { t: "code", code: `print(42)
@@ -590,14 +602,14 @@ print("C")`, options: ["A puis B puis C", "A puis C", "C puis A", "Une erreur"],
   ],
   ex: {
     title: "Ta première ordonnance",
-    task: "Écris un programme qui affiche exactement ces <b>deux lignes</b> :<br><code>Bonjour Docteur</code><br><code>J'apprends Python</code>",
+    task: "Écris un programme qui affiche exactement ces <b>deux lignes</b> :<br><code>Bonjour Prof</code><br><code>J'apprends Python</code>",
     starter: `# Écris tes deux print() ici
 `,
     check: `verifie(len(__lignes__) >= 2, "Il faut afficher deux lignes : utilise print() deux fois.")
-verifie(__lignes__[0].strip() == "Bonjour Docteur", "La première ligne doit être exactement : Bonjour Docteur")
+verifie(__lignes__[0].strip() == "Bonjour Prof", "La première ligne doit être exactement : Bonjour Prof")
 verifie(__lignes__[1].strip() == "J'apprends Python", "La deuxième ligne doit être exactement : J'apprends Python")`,
     hints: ["Il faut deux instructions <code>print()</code>, une par ligne.", "Le texte contient une apostrophe : entoure-le de guillemets doubles, comme <code>\"J'apprends Python\"</code>."],
-    solution: `print("Bonjour Docteur")
+    solution: `print("Bonjour Prof")
 print("J'apprends Python")`
   },
   recap: ["<b>print()</b> affiche ce qu'on lui donne", "Le texte se met entre <b>guillemets</b>, les nombres non", "Python lit <b>de haut en bas</b>", "<b>#</b> commence un commentaire ignoré par Python"]
@@ -874,7 +886,7 @@ print(n * 2)`, options: ["8", "44", "Une erreur"], answer: 1, explain: "n vaut l
   ],
   ex: {
     title: "La calculatrice d'âge",
-    task: "Demande à l'utilisateur son <b>année de naissance</b> avec <code>input()</code>, convertis-la en nombre, calcule son âge en <b>2026</b> et affiche une phrase qui contient cet âge.<br><span class='muted'>Pour la vérification, le Docteur tapera automatiquement 1998 : il attend 28 dans la phrase.</span>",
+    task: "Demande à l'utilisateur son <b>année de naissance</b> avec <code>input()</code>, convertis-la en nombre, calcule son âge en <b>2026</b> et affiche une phrase qui contient cet âge.<br><span class='muted'>Pour la vérification, le Prof tapera automatiquement 1998 : il attend 28 dans la phrase.</span>",
     inputs: ["1998"],
     starter: `annee = input("Ton année de naissance ? ")
 age = 2026 - annee
@@ -937,7 +949,7 @@ else:
   ],
   ex: {
     title: "Le tri des urgences",
-    task: "Écris un programme qui, selon la variable <code>douleur</code> (de 0 à 10), affiche :<br>• <code>Urgent</code> si douleur vaut 8 ou plus<br>• <code>Prioritaire</code> si elle vaut de 5 à 7<br>• <code>Salle d'attente</code> sinon.<br><span class='muted'>Le Docteur testera ta logique avec plusieurs valeurs.</span>",
+    task: "Écris un programme qui, selon la variable <code>douleur</code> (de 0 à 10), affiche :<br>• <code>Urgent</code> si douleur vaut 8 ou plus<br>• <code>Prioritaire</code> si elle vaut de 5 à 7<br>• <code>Salle d'attente</code> sinon.<br><span class='muted'>Le Prof testera ta logique avec plusieurs valeurs.</span>",
     starter: `douleur = 6
 
 `,
@@ -952,7 +964,7 @@ else:
     finally:
         sys.stdout = old
     return buf.getvalue().strip()
-verifie("douleur = 6" in __source__, "Garde la ligne douleur = 6 en haut : le Docteur la modifie pour tester.")
+verifie("douleur = 6" in __source__, "Garde la ligne douleur = 6 en haut : le Prof la modifie pour tester.")
 for v, attendu in [(9, "Urgent"), (8, "Urgent"), (7, "Prioritaire"), (5, "Prioritaire"), (4, "Salle d'attente"), (0, "Salle d'attente")]:
     r = tester(v)
     verifie(r == attendu, f"Avec douleur = {v}, on attend « {attendu} » mais ton programme affiche « {r} ».")`,
@@ -1014,7 +1026,7 @@ print(a and b, a or b, not b)`, options: ["True True True", "False True True", "
   ],
   ex: {
     title: "Le droit au don du sang",
-    task: "Une personne peut donner son sang si elle a <b>entre 18 et 70 ans</b> (inclus) <b>et</b> pèse <b>au moins 50 kg</b>. Crée une variable <code>peut_donner</code> qui vaut <code>True</code> ou <code>False</code> à partir de <code>age</code> et <code>poids</code>, puis affiche-la.<br><span class='muted'>Le Docteur testera plusieurs profils.</span>",
+    task: "Une personne peut donner son sang si elle a <b>entre 18 et 70 ans</b> (inclus) <b>et</b> pèse <b>au moins 50 kg</b>. Crée une variable <code>peut_donner</code> qui vaut <code>True</code> ou <code>False</code> à partir de <code>age</code> et <code>poids</code>, puis affiche-la.<br><span class='muted'>Le Prof testera plusieurs profils.</span>",
     starter: `age = 25
 poids = 60
 peut_donner =
@@ -1031,7 +1043,7 @@ print(peut_donner)
     finally:
         sys.stdout = old
     return ns.get("peut_donner")
-verifie("age = 25" in __source__ and "poids = 60" in __source__, "Garde les lignes age = 25 et poids = 60 : le Docteur les modifie pour tester.")
+verifie("age = 25" in __source__ and "poids = 60" in __source__, "Garde les lignes age = 25 et poids = 60 : le Prof les modifie pour tester.")
 for a, p, att in [(25, 60, True), (17, 60, False), (18, 50, True), (70, 80, True), (71, 80, False), (30, 49, False)]:
     r = tester(a, p)
     verifie(r is att, f"Avec age = {a} et poids = {p}, peut_donner devrait valoir {att}, ton code donne {r}.")`,
@@ -1158,7 +1170,7 @@ for i in range(1, 11):
   recap: ["<b>for x in séquence:</b> parcourt chaque élément", "<b>range(debut, fin, pas)</b>, la fin est exclue", "Accumulateur : variable à 0 avant, <b>+=</b> dedans", "<b>continue</b> saute au tour suivant, <b>break</b> sort"]
 });
 
-/* ====== Parcours Docteur Python : niveaux 3, 4 et 5 ====== */
+/* ====== Parcours Prof Python : niveaux 3, 4 et 5 ====== */
 
 /* ---------- 11 ---------- */
 LESSONS.push({
@@ -1555,7 +1567,7 @@ LESSONS.push({
     { t: "analogy", title: "Le compte rendu médical", html: "Un message d'erreur se lit comme un compte rendu : <b>où</b> (le fichier et la ligne), <b>quoi</b> (le type d'erreur) et <b>pourquoi</b> (le message). Lis toujours <b>la dernière ligne en premier</b> : c'est le diagnostic." },
     { t: "traceback" },
     { t: "table", head: ["Erreur", "Signifie", "Exemple"], rows: [["<b>SyntaxError</b>", "Le code est mal écrit", "<code>if x == 1</code> (sans :)"], ["<b>IndentationError</b>", "Mauvais décalage", "Bloc non décalé après :"], ["<b>NameError</b>", "Nom inconnu", "<code>print(prenon)</code>"], ["<b>TypeError</b>", "Types incompatibles", "<code>\"a\" + 1</code>"], ["<b>ValueError</b>", "Bon type, mauvaise valeur", "<code>int(\"abc\")</code>"], ["<b>IndexError</b>", "Indice hors de la liste", "<code>[1, 2][5]</code>"], ["<b>KeyError</b>", "Clé absente du dictionnaire", "<code>{}[\"x\"]</code>"], ["<b>ZeroDivisionError</b>", "Division par zéro", "<code>5 / 0</code>"]] },
-    { t: "tip", html: "Dans le labo, chaque erreur est accompagnée d'un <b>Diagnostic du Docteur</b> qui l'explique en français et propose un traitement." },
+    { t: "tip", html: "Dans le labo, chaque erreur est accompagnée d'un <b>Diagnostic du Prof</b> qui l'explique en français et propose un traitement." },
     { t: "h", text: "try / except : prévoir l'imprévu" },
     { t: "p", html: "On met le code risqué dans <b>try</b> (« essaie »). Si une erreur survient, Python saute dans <b>except</b> au lieu de planter." },
     { t: "code", code: `texte = "douze"
@@ -1893,7 +1905,7 @@ LESSONS.push({
     return total / len(valeurs)` } },
     { t: "h", text: "Le Zen de Python" },
     { t: "code", code: `import this`, note: "Exécute-le : 19 principes écrits par Tim Peters. Les plus utiles au début : « Beautiful is better than ugly », « Simple is better than complex », « Readability counts »." },
-    { t: "h", text: "La méthode du Docteur pour résoudre un problème" },
+    { t: "h", text: "La méthode du Prof pour résoudre un problème" },
     { t: "flow", steps: ["Comprendre : reformule le problème avec tes mots, avec un exemple d'entrée et de sortie", "Découper : liste les petites étapes, chacune devient souvent une fonction", "Écrire petit : code une étape, exécute, vérifie, puis passe à la suivante", "Soigner : lis l'erreur par la fin, ajoute des print() pour voir les valeurs, ou utilise la Radiographie"] },
     { t: "tip", html: "<b>Déboguer avec print :</b> quand un résultat est faux, affiche les variables à chaque étape (<code>print(\"DEBUG\", x, total)</code>). Tu verras exactement où les valeurs divergent de ce que tu attendais. Pense à les retirer ensuite." },
     { t: "rule", html: "<b>Ne te répète pas</b> (principe DRY, « Don't Repeat Yourself ») : si tu copies-colles le même bloc trois fois, c'est le signe qu'il faut une fonction ou une boucle." },
@@ -2038,7 +2050,7 @@ k.ajouter("d", "pouls", 100)
 k.ajouter("e", "pouls", 130)
 verifie(hasattr(k, "alertes"), "Ajoute une méthode alertes(self, type_mesure, seuil) dans la classe Carnet.")
 r = k.alertes("pouls", 100)
-verifie(r == ["b", "e"], "alertes(\\"pouls\\", 100) devrait renvoyer ['b', 'e'] sur le jeu de test du Docteur. Obtenu : " + repr(r))
+verifie(r == ["b", "e"], "alertes(\\"pouls\\", 100) devrait renvoyer ['b', 'e'] sur le jeu de test du Prof. Obtenu : " + repr(r))
 verifie(k.alertes("tension", 140) == ["c"], "Le filtre doit aussi porter sur le type de mesure.")
 verifie(k.alertes("glycemie", 1) == [], "Sans mesure du type demandé, la méthode doit renvoyer une liste vide.")`,
     hints: ["La méthode reçoit <code>self</code> en premier : <code>def alertes(self, type_mesure, seuil):</code>.", "Une compréhension de liste qui renvoie <code>m.date</code> avec deux conditions reliées par <b>and</b>.", "<code>return [m.date for m in self.mesures if m.type == type_mesure and m.valeur > seuil]</code>"],
@@ -2072,7 +2084,7 @@ print(carnet.alertes("pouls", 100))`
   recap: ["Tu sais <b>stocker</b> (variables, listes, dictionnaires, objets)", "Tu sais <b>décider et répéter</b> (if, for, while)", "Tu sais <b>organiser</b> (fonctions, classes, modules)", "Tu sais <b>soigner</b> ton code (erreurs, try, débogage)"]
 });
 
-/* ====== Parcours Docteur Python : niveau 6, Python pour la cyber ====== */
+/* ====== Parcours Prof Python : niveau 6, Python pour la cyber ====== */
 LEVELS.push({ n: 6, title: "Python pour la cyber", sub: "Encodages, hachage, regex et analyse de logs, côté défense", color: "teal", icon: "shield-check" });
 
 /* ---------- 23 ---------- */
@@ -2630,8 +2642,8 @@ print(s.comptes_vises())`
 const PRACTICE = [
   /* --- Niveau 1 --- */
   { id: "p-ordre-bonjour", lesson: "premier-programme", type: "parsons", title: "La présentation dans l'ordre",
-    task: "Remets les lignes dans l'ordre pour afficher : <code>Bonjour</code>, puis <code>Je m'appelle Docteur</code>, puis <code>Au revoir</code>.",
-    lines: [`print("Bonjour")`, `print("Je m'appelle Docteur")`, `print("Au revoir")`] },
+    task: "Remets les lignes dans l'ordre pour afficher : <code>Bonjour</code>, puis <code>Je m'appelle Prof</code>, puis <code>Au revoir</code>.",
+    lines: [`print("Bonjour")`, `print("Je m'appelle Prof")`, `print("Au revoir")`] },
   { id: "p-trous-variables", lesson: "variables", type: "blanks", title: "La boîte qui grandit",
     task: "Complète pour que <code>score</code> passe de 10 à 15, puis s'affiche.",
     code: `score ___ 10
@@ -2657,7 +2669,7 @@ print(reste, part)   # 1 8`, answers: [["%"], ["//"]] },
     task: "Remets dans l'ordre pour afficher <code>Bonjour AWA</code>.",
     lines: [`brut = "  awa  "`, `nom = brut.strip().upper()`, `message = f"Bonjour {nom}"`, `print(message)`] },
   { id: "p-bug-input", lesson: "input", type: "bug", title: "L'âge qui plante",
-    task: "Le Docteur tape <code>30</code> à la question. Le programme doit afficher <code>Dans 5 ans : 35</code>, mais il plante. Corrige-le.",
+    task: "Le Prof tape <code>30</code> à la question. Le programme doit afficher <code>Dans 5 ans : 35</code>, mais il plante. Corrige-le.",
     inputs: ["30"],
     code: `age = input("Ton âge ? ")
 print("Dans 5 ans :", age + 5)
@@ -2890,7 +2902,7 @@ def code_valide(code):
 print(code_valide("AB1234"), code_valide("AB12345"))` }
 ];
 
-/* ====================== Docteur Python : application ====================== */
+/* ====================== Prof Python : application ====================== */
 (function () {
 "use strict";
 
@@ -3236,7 +3248,7 @@ class Console {
     const d = diagnose(r);
     const where = r.line ? `à la <b>ligne ${r.line}</b>` : "";
     this.html(`<div class="diag">
-      <div class="diag-head"><span class="tile">${ic(d.icon)}</span><div><div class="lbl">Diagnostic du Docteur</div><b>${esc(r.etype)} : ${esc(d.name)} ${where ? "· " + where : ""}</b></div></div>
+      <div class="diag-head"><span class="tile">${ic(d.icon)}</span><div><div class="lbl">Diagnostic du Prof</div><b>${esc(r.etype)} : ${esc(d.name)} ${where ? "· " + where : ""}</b></div></div>
       <div class="diag-body">
         ${d.spec ? `<p><b>Ce qui se passe :</b> ${d.spec}</p>` : ""}
         <p>${d.what}</p>
@@ -3551,7 +3563,7 @@ function renderHome() {
       <svg class="hero-deco" viewBox="0 0 200 200" aria-hidden="true"><rect x="70" y="10" width="60" height="100" rx="30" fill="var(--blue)" opacity=".16"/><rect x="10" y="70" width="100" height="60" rx="30" fill="var(--blue)" opacity=".16"/><rect x="70" y="70" width="60" height="120" rx="30" fill="var(--yellow)" opacity=".28"/><rect x="70" y="70" width="120" height="60" rx="30" fill="var(--yellow)" opacity=".28"/></svg>
       <span class="eyebrow">Le cabinet est ouvert</span>
       <h1>Apprends Python <span style="color:var(--blue)">de zéro</span>, une consultation à la fois.</h1>
-      <p>Des explications terre à terre, des images concrètes, des exercices corrigés automatiquement et un labo pour tester tout ce que tu veux. Quand ton code plante, le Docteur pose le diagnostic.</p>
+      <p>Des explications terre à terre, des images concrètes, des exercices corrigés automatiquement et un labo pour tester tout ce que tu veux. Quand ton code plante, le Prof pose le diagnostic.</p>
       <div class="hero-next">
         <span class="tile ${tint(nxLvl.color)}">${ic(nx.icon)}</span>
         <div class="txt"><span>${started ? "Prochaine consultation" : "Pour commencer"} · n°${nxIdx}</span><b>${esc(nx.title)}</b></div>
@@ -3799,7 +3811,7 @@ function renderExercise(l) {
   const saved = store.get("dp.ex." + l.id, null);
   const host = $("#exo");
   host.innerHTML = `<div class="rx">
-    <div class="rx-head"><span class="tile">${ic("pill")}</span><div><div class="lbl">Ordonnance du Docteur</div><h3>${esc(ex.title)}</h3></div>${s.ex ? `<span class="pill done" style="margin-left:auto">${ic("circle-check")} Réussie</span>` : ""}</div>
+    <div class="rx-head"><span class="tile">${ic("pill")}</span><div><div class="lbl">Exercice du Prof</div><h3>${esc(ex.title)}</h3></div>${s.ex ? `<span class="pill done" style="margin-left:auto">${ic("circle-check")} Réussie</span>` : ""}</div>
     <div class="rx-body">
       <div class="rx-task">${ex.task}</div>
       <div id="ex-editor"></div>
@@ -3875,7 +3887,7 @@ function renderRecapActions(l) {
 
 /* ---------- Labo ---------- */
 const EXAMPLES = [
-  { name: "Bonjour", icon: "hand", c: "blue", code: `# Bienvenue dans le labo du Docteur Python !
+  { name: "Bonjour", icon: "hand", c: "blue", code: `# Bienvenue dans le labo du Prof Python !
 # Modifie ce code puis clique sur Exécuter (ou Ctrl + Entrée).
 
 prenom = input("Comment t'appelles-tu ? ")
@@ -3926,7 +3938,7 @@ def interpretation(valeur):
 resultat = imc(70, 1.75)
 print(f"IMC : {resultat} ({interpretation(resultat)})")
 ` },
-  { name: "Compteur de lettres", icon: "book-a", c: "violet", code: `phrase = "le docteur python soigne les bugs"
+  { name: "Compteur de lettres", icon: "book-a", c: "violet", code: `phrase = "le prof python corrige les bugs"
 compte = {}
 for lettre in phrase:
     if lettre != " ":
@@ -4409,13 +4421,13 @@ const Install = {
       navigator.serviceWorker.register("/sw.js").catch(() => {});
     }
     window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); this.prompt = e; if (currentView === "home") renderHome(); });
-    window.addEventListener("appinstalled", () => { this.prompt = null; toast("Docteur Python est installé", "smartphone"); if (currentView === "home") renderHome(); });
+    window.addEventListener("appinstalled", () => { this.prompt = null; toast("Prof Python est installé", "smartphone"); if (currentView === "home") renderHome(); });
   },
   standalone() { try { return window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true; } catch (e) { return false; } },
   ios() { return /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); },
   card() {
     if (!window.DP_SITE || this.standalone() || store.get("dp.install.hide", false)) return "";
-    if (this.prompt) return `<div class="card todayc t-green"><span class="tile">${ic("smartphone")}</span><div class="txt"><div class="eyebrow" style="color:var(--c-ink)">Appli hors ligne</div><h3>Installe Docteur Python</h3><p>Une icône sur ton écran d'accueil, et le labo fonctionne même sans connexion.</p></div><button class="btn primary" id="do-install">${ic("download")} Installer</button></div>`;
+    if (this.prompt) return `<div class="card todayc t-green"><span class="tile">${ic("smartphone")}</span><div class="txt"><div class="eyebrow" style="color:var(--c-ink)">Appli hors ligne</div><h3>Installe Prof Python</h3><p>Une icône sur ton écran d'accueil, et le labo fonctionne même sans connexion.</p></div><button class="btn primary" id="do-install">${ic("download")} Installer</button></div>`;
     if (this.ios()) return `<div class="card todayc t-green"><span class="tile">${ic("smartphone")}</span><div class="txt"><div class="eyebrow" style="color:var(--c-ink)">Appli hors ligne</div><h3>Ajoute-le à ton écran d'accueil</h3><p>Dans Safari : touche ${ic("share")} <b>Partager</b>, puis <b>Sur l'écran d'accueil</b>. Ensuite, tout fonctionne sans connexion.</p></div><button class="btn ghost sm" id="hide-install" title="Masquer">${ic("x")}</button></div>`;
     return "";
   },

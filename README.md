@@ -1,4 +1,4 @@
-# Docteur Python
+# Prof Python
 
 Application web pour apprendre Python de zéro : 27 consultations sur 6 niveaux (dont un niveau « Python pour la cyber »), quiz, exercices corrigés automatiquement, révision espacée, défi du jour, exercices « remettre dans l'ordre », « chasse au bug » et « code à trous », un labo qui exécute Python dans le navigateur (Pyodide), une Radiographie pas à pas et un diagnostic des erreurs en français. Installable sur téléphone et utilisable hors ligne.
 
